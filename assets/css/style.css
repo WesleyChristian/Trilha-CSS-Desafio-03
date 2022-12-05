@@ -1,0 +1,115 @@
+@import url(reset.css);
+
+body {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: 100px repeat(3, 250px);
+    grid-template-areas: 
+    "header header header header header"
+    "aside main main main main"
+    "aside main main main main"
+    "aside main main main main";
+}
+
+header {
+    grid-area: header;
+}
+
+.conta {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    height: 100px;
+}
+
+.logo img {
+    padding-left: 10px;
+}
+
+#youtube {
+    margin-left: 25px;
+}
+
+.busca input {
+    width: 350px;
+    height: 35px;
+}
+
+.busca img {
+    background-color: rgba(248, 248, 248, 1);
+    height: 35px;
+    border: 1px solid rgba(204, 204, 204, 1);
+    float: right;
+}
+
+.perfil {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.perfil img {
+    border-radius: 50%;
+}
+
+main {
+    grid-area: main;
+}
+
+.videos {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 250px);
+    gap: 30px;
+}
+
+.video {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.videos h1 {
+    font-weight: bold;
+    font-size: 1rem;
+    margin-left: 10px;
+}
+
+.videos span {
+    margin-left: 50px;
+    font-weight: 400;
+    font-size: .8rem;
+    color: rgba(81, 81, 81, 1);
+}
+
+.video-information {
+    display: flex;
+    flex-direction: row;
+    width: 250px;
+}
+
+.video-information img {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+}
+
+aside {
+    grid-area: aside;
+    display: flex;
+    flex-direction: column;
+}
+
+.lateral {
+    display: flex;
+    flex-direction: row;
+    margin: 10px 30px;
+    gap: 10px;
+}
+
+.lateral h2 {
+    font-weight: 400;
+    font-size: 1rem;
+}
